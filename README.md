@@ -1,8 +1,31 @@
-# React + Vite
+Terra Landing Page
+This project is a responsive landing page for Terra, built with React and styled with SASS. It features a dynamic hero section, a card-based content display, and responsive design for various screen sizes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+• Responsive design that works on desktop, tablet, and mobile devices
+• Dynamic hero section with changing content based on visit status
+• Card section displaying blog posts or featured content
+• Navbar with responsive menu for mobile devices
+• Utilizes React for component-based architecture
+• Styled with SASS for maintainable and modular CSS
 
-Currently, two official plugins are available:
+Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+• Node.js (v14.0.0 or later)
+• npm (v6.0.0 or later)
+
+Installation
+To install the Terra Landing Page, follow these steps:
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/terra-landing-page.git
+
+2. Navigate to the project directory:
+
+cd terra-landing-page
+
+3. Install the dependencies:
+
+npm install
