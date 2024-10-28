@@ -1,0 +1,109 @@
+@import '../../styles/variables';
+
+.card-section {
+    padding: $spacing-xxl $spacing-medium;
+    background-color: $color-background;
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: $font-size-xxl;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: $spacing-xl;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-large;
+        max-width: $breakpoint-xl;
+        margin: 0 auto;
+
+        @media (max-width: $breakpoint-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 200px;
+        margin: $spacing-xl auto 0;
+        padding: $spacing-medium;
+        background-color: $color-primary;
+        color: $color-background;
+        text-align: center;
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-weight: 500;
+        font-size: $font-size-base;
+        border-radius: $border-radius-small;
+        transition: background-color $transition-medium;
+
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+    }
+}
+
+.card {
+    background-color: $color-background;
+    border-radius: $border-radius-medium;
+    overflow: hidden;
+    box-shadow: $box-shadow-medium;
+    transition: transform $transition-medium, box-shadow $transition-medium;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-large;
+    }
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    &__type {
+        position: absolute;
+        top: $spacing-small;
+        left: $spacing-small;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $color-background;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        &--type-a {
+            background-color: $color-type-a;
+        }
+
+        &--type-b {
+            background-color: $color-type-b;
+        }
+    }
+
+    &__content {
+        padding: $spacing-medium;
+    }
+
+    &__date {
+        font-family: $font-primary;
+        font-size: $font-size-small;
+        color: lighten($color-text, 20%);
+        margin-bottom: $spacing-small;
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: $font-size-large;
+        font-weight: 500;
+        margin-bottom: $spacing-small;
+    }
+}

@@ -1,7 +1,47 @@
-$background-color: #f5f5f5;
-$background-color-dark: #333;
-$text-color: #333;
-$text-color-light: #666;
-$accent-color: #F78BD8;
-$accent-color-hover: darken(#F78BD8, 10%);
-$white: #fff;
+// Colors
+$color-primary: #00A86B;
+$color-secondary: #F78BD8;
+$color-text: #333333;
+$color-background: #FFFFFF;
+$color-light-gray: #F5F5F5;
+$color-type-a: #F78BD8;
+$color-type-b: #00A86B;
+
+// Typography
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Red Hat Display', sans-serif;
+
+// Font sizes
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+
+// Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// Breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xl: 1920px;
+
+// Border radius
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 16px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-medium: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Box shadows
+$box-shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-large: 0 8px 16px rgba(0, 0, 0, 0.1);

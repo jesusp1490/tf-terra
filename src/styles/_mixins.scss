@@ -1,19 +1,93 @@
+@import 'variables';
+
+// Responsive breakpoints
 @mixin respond-to($breakpoint) {
-    @if $breakpoint =='small' {
-        @media (max-width: 576px) {
+    @if $breakpoint ==small {
+        @media (max-width: $breakpoint-small) {
             @content;
         }
     }
 
-    @else if $breakpoint =='medium' {
-        @media (max-width: 768px) {
+    @else if $breakpoint ==medium {
+        @media (max-width: $breakpoint-medium) {
             @content;
         }
     }
 
-    @else if $breakpoint =='large' {
-        @media (max-width: 992px) {
+    @else if $breakpoint ==large {
+        @media (max-width: $breakpoint-large) {
             @content;
         }
     }
+
+    @else if $breakpoint ==xl {
+        @media (max-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+}
+
+// Flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+// Center content
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Typography
+@mixin font-style($family: $font-primary, $size: $font-size-base, $weight: normal, $line-height: 1.5) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+// Buttons
+@mixin button-style($bg-color: $color-primary, $text-color: $color-background, $hover-color: darken($bg-color, 10%)) {
+    display: inline-block;
+    padding: $spacing-small $spacing-medium;
+    background-color: $bg-color;
+    color: $text-color;
+    text-decoration: none;
+    font-family: $font-secondary;
+    font-weight: 500;
+    border-radius: $border-radius-small;
+    transition: background-color $transition-medium;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+// Card styles
+@mixin card-style {
+    background-color: $color-background;
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow-medium;
+    overflow: hidden;
+}
+
+// Truncate text
+@mixin truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Absolute positioning
+@mixin absolute-position($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
