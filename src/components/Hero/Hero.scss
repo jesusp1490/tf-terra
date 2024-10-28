@@ -47,14 +47,15 @@
         transition: background-color $transition-medium;
 
         &:hover {
-            background-color: darken($color-primary, 10%);
+            background-color: #F78BD8;
+            color: $color-light-gray;
         }
 
         &--second-visit {
             background-color: $color-text;
 
             &:hover {
-                background-color: lighten($color-text, 10%);
+                background-color: #F78BD8;
             }
         }
     }

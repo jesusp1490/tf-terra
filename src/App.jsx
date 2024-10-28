@@ -38,11 +38,6 @@ const App = () => {
     }
   }, [isSecondVisit]);
 
-  const resetToFirstVisit = () => {
-    localStorage.removeItem('hasVisited');
-    setIsSecondVisit(false);
-  };
-
   if (!data) return <div>Loading...</div>;
 
   return (
@@ -58,20 +53,6 @@ const App = () => {
         isSecondVisit={isSecondVisit}
       />
       <CardSection title={data.body.title} posts={data.body.posts} buttonLabel={data.body.button_label} buttonLink={data.body.button_link} />
-      
-      <button onClick={resetToFirstVisit} style={{
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        padding: '10px 15px',
-        backgroundColor: '#f0f0f0',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        zIndex: 1000
-      }}>
-        Reset to First Visit
-      </button>
     </>
   );
 };

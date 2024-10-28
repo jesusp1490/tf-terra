@@ -9,6 +9,7 @@
         font-size: $font-size-xxl;
         font-weight: 700;
         text-align: center;
+        padding-top: 3rem;
         margin-bottom: $spacing-xl;
     }
 
@@ -17,6 +18,7 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: $spacing-large;
         max-width: $breakpoint-xl;
+        padding: 2rem 5rem 5rem 5rem;
         margin: 0 auto;
 
         @media (max-width: $breakpoint-medium) {
@@ -40,7 +42,8 @@
         transition: background-color $transition-medium;
 
         &:hover {
-            background-color: darken($color-primary, 10%);
+            background-color: #F78BD8;
+            color: #F5F5F5;
         }
     }
 }
@@ -63,7 +66,7 @@
 
     &__image {
         width: 100%;
-        height: 450px;
+        height: 550px;
         object-fit: cover;
     }
 
@@ -76,7 +79,6 @@
         font-family: $font-secondary;
         font-size: $font-size-small;
         font-weight: 500;
-        text-transform: uppercase;
         color: $color-background;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
